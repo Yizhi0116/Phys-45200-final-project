@@ -473,39 +473,47 @@ if estimated_cost > 5e9:
         "or lattice size for testing."
     )
 
-st.markdown(
-    rf"""
-### Current model
+st.header("Current model")
 
-OAT:
+st.markdown("OAT:")
 
-\[
-H_{{\mathrm{{OAT}}}} =
-\chi \sum_{{i<j}} J_{{ij}} S_i^z S_j^z
-\]
-
-Generalized TAT:
-
-\[
-H_{{\mathrm{{TAT}}}} =
-\chi \sum_{{i<j}} J_{{ij}}
-\left(
-r S_i^z S_j^z
--
-S_i^y S_j^y
-\right)
-\]
-
-where
-
-\[
-r = |J_z/J_y|.
-\]
-
-For ideal symmetric TAT, use \(r=1\).
-"""
+st.latex(
+    r"""
+    H_{\mathrm{OAT}}
+    =
+    \chi
+    \sum_{i<j}
+    J_{ij}
+    S_i^z S_j^z
+    """
 )
 
+st.markdown("Generalized TAT:")
+
+st.latex(
+    r"""
+    H_{\mathrm{TAT}}
+    =
+    \chi
+    \sum_{i<j}
+    J_{ij}
+    \left(
+    r S_i^z S_j^z
+    -
+    S_i^y S_j^y
+    \right)
+    """
+)
+
+st.markdown("where")
+
+st.latex(
+    r"""
+    r = \left| \frac{J_z}{J_y} \right|
+    """
+)
+
+st.markdown("For ideal symmetric TAT, use \(r = 1\).")
 
 # ============================================================
 # Run simulation
