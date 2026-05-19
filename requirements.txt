@@ -6,3 +6,4 @@ pylatexenc
 numpy
 scipy
 pandas
+plotly
