@@ -1,0 +1,8 @@
+streamlit
+qiskit
+qiskit-aer
+matplotlib
+pylatexenc
+numpy
+scipy
+pandas
